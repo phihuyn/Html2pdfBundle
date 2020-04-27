@@ -1,0 +1,59 @@
+<?php
+
+namespace Ensepar\Html2pdfBundle\Factory;
+
+use Spipu\Html2Pdf\Html2Pdf;
+
+/**
+ * Creates HTML2PDF instances.
+ */
+class Html2pdfFactory
+{
+    private $orientation;
+    private $format;
+    private $lang;
+    private $unicode;
+    private $encoding;
+    private $margin;
+
+    /**
+     * @param string $orientation
+     * @param string $format
+     * @param string $lang
+     * @param boolean $unicode
+     * @param string $encoding
+     * @param int[] $margin
+     */
+    public function __construct($orientation = 'P', $format = 'A4', $lang = 'en', $unicode = true, $encoding = 'UTF-8', $margin = array(10,10,3,3))
+    {
+        $this->orientation = $orientation;
+        $this->format = $format;
+        $this->lang = $lang;
+        $this->unicode = $unicode;
+        $this->margin = $margin;
+        $this->encoding = $encoding;
+    }
+
+    /**
+     * If not provided, the following arguments will be replaced by the default
+     * value set in the constructor.
+     *
+     * @param string $orientation
+     * @param string $format
+     * @param string $lang
+     * @param boolean $unicode
+     * @param string $encoding
+     * @param int[] $margin
+     */
+    public function create($orientation = null, $format = null, $lang = null, $unicode = null, $encoding = null, $margin = null)
+    {
+        return new Html2Pdf(
+            $orientation ? $orientation : $this->orientation,
+            $format ? $format : $this->format,
+            $lang ? $lang : $this->lang,
+            $unicode ? $unicode : $this->unicode,
+            $encoding ? $encoding : $this->encoding,
+            $margin ? $margin : $this->margin
+        );
+    }
+}
