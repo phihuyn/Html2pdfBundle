@@ -1,4 +1,4 @@
-EnseparHtml2pdfBundle
+Html2pdfBundle
 =====================
 
 [![SensioLabsInsight](https://insight.sensiolabs.com/projects/0e16b696-0da3-4efc-b856-60429a9672b4/mini.png)](https://insight.sensiolabs.com/projects/0e16b696-0da3-4efc-b856-60429a9672b4)
