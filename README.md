@@ -16,7 +16,7 @@ Just add this to your composer.json file:
   ...
   "phihuynh/html2pdfbundle": "dev-master",
 }
-
+```
 How to use ?
 ------------
 
