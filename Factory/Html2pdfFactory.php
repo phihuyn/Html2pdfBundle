@@ -24,7 +24,7 @@ class Html2pdfFactory
      * @param string $encoding
      * @param int[] $margin
      */
-    public function __construct($orientation = 'P', $format = 'A4', $lang = 'en', $unicode = true, $encoding = 'UTF-8', $margin = array(10,10,3,3))
+    public function __construct($orientation, $format, $lang, $unicode, $encoding, $margin)
     {
         $this->orientation = $orientation;
         $this->format = $format;
