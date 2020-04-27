@@ -14,14 +14,8 @@ Just add this to your composer.json file:
 ```js
 "require": {
   ...
-  "ensepar/html2pdf-bundle" : "~2.0"
+  "phihuynh/html2pdfbundle": "dev-master",
 }
-```
-Enable it in the Kernel
-
-```php
-new Ensepar\Html2pdfBundle\EnseparHtml2pdfBundle(),
-```
 
 How to use ?
 ------------
@@ -29,13 +23,18 @@ How to use ?
 In your action:
 
 ```php
-$html2pdf = $this->get('html2pdf_factory')->create();
+use Ensepar\Html2pdfBundle\Factory\Html2pdfFactory;
+
+public function yourAction(Request $request, Html2pdfFactory $html2pdfFactory){
+  ...
+  $html2pdf = $html2pdfFactory->create();
+}
 ```
 
 You can pass every option you would pass to html2pdf, for instance :
 
 ```
-$html2pdf = $this->get('html2pdf_factory')->create('P', 'A4', 'en', true, 'UTF-8', array(10, 15, 10, 15));
+$html2pdf = $html2pdfFactory->create('P', 'A4', 'en', true, 'UTF-8', array(10, 15, 10, 15));
 ```
 
 If the previous arguments are not provided, the factory uses its own default values. You can
