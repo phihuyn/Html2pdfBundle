@@ -37,19 +37,6 @@ You can pass every option you would pass to html2pdf, for instance :
 $html2pdf = $html2pdfFactory->create('P', 'A4', 'en', true, 'UTF-8', array(10, 15, 10, 15));
 ```
 
-If the previous arguments are not provided, the factory uses its own default values. You can
-change this default values by adding the bundle configuration to your `app/config/config.yml` :
-
-```yml
-ensepar_html2pdf:
-    orientation: P
-    format: A4
-    lang: en
-    unicode: true
-    encoding: UTF-8
-    margin: [10,15,10,15]
-```
-
 How to run the tests ?
 ----------------------
 
