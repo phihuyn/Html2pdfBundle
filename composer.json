@@ -1,5 +1,5 @@
 {
-    "name": "ph/html2pdfbundle",
+    "name": "phihuynh/html2pdfbundle",
     "type": "symfony-bundle",
     "description": "Use HTML2PDF as a Symfony2 Service",
     "keywords": ["pdf", "tcpdf", "html2pdf"],
